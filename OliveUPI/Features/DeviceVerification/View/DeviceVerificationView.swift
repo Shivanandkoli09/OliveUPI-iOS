@@ -10,6 +10,11 @@ import SwiftUI
 struct DeviceVerificationView: View {
 
     var body: some View {
-        Text("DeviceVerificationView")
+
+        VStack {
+
+            Text("Device Verification")
+                .font(.largeTitle)
+        }
     }
 }
