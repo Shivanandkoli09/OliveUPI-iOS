@@ -11,6 +11,7 @@ import SwiftUI
 struct SimBindingView: View {
 
     @StateObject private var viewModel = SimBindingViewModel()
+    @EnvironmentObject var onboardingSession: OnboardingSession
 
     @EnvironmentObject var appState: AppState
 
@@ -53,6 +54,10 @@ struct SimBindingView: View {
                         await viewModel.verifySIM()
 
                         if viewModel.isVerified {
+
+                            onboardingSession.mobileNumber =
+                                viewModel.mobileNumber
+
                             appState.currentFlow = .deviceVerification
                         }
                     }
