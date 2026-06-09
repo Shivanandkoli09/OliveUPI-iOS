@@ -23,4 +23,8 @@ final class OnboardingSession: ObservableObject {
     @Published var accountNumber: String = ""
 
     @Published var upiId: String = ""
+    
+    @Published var sessionToken: String = ""
+
+    @Published var customerStatus: String = ""
 }
