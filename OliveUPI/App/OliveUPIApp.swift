@@ -12,10 +12,14 @@ struct OliveUPIApp: App {
 
     @StateObject private var appState = AppState()
 
+    @StateObject private var onboardingSession = OnboardingSession()
+
     var body: some Scene {
         WindowGroup {
+
             RootView()
                 .environmentObject(appState)
+                .environmentObject(onboardingSession)
         }
     }
 }
